@@ -57,6 +57,7 @@ create table GURU
    IS_ACTIVE            bool not null,
    USERNAME             varchar(100) not null,
    PASSWORD             varchar(100) not null,
+   NAMA_FILE_FOTO       varchar(100),
    primary key (NIP)
 );
 
@@ -209,6 +210,7 @@ create table SISWA
    IS_ACTIVE            bool not null,
    USERNAME             varchar(100) not null,
    PASSWORD             varchar(100) not null,
+   NAMA_FILE_FOTO       varchar(100),
    primary key (NOMOR_INDUK)
 );
 
