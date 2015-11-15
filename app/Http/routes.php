@@ -39,6 +39,10 @@ Route::get('/testing', 'WelcomeController@testing');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('insert_guru',['as'=>'insert_guru','uses'=>'CrudController@insert_guru']);
+
+Route::get('insert_siswa',['as'=>'insert_siswa','uses'=>'CrudController@insert_siswa']);
+
 Route::get('jurusan', 'AdminController@show_all_jurusan');
 
 Route::controllers([
