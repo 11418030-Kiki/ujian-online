@@ -55,7 +55,7 @@
                 </ul>
             </li>  
             <li>
-                <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
+                <a href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
             </li>   
         </ul>
     </div>
