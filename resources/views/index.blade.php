@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Binary admin</a> 
+                <a class="navbar-brand" href="">Ujian Online</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -37,12 +37,12 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="/img/find_user.png" class="user-image img-responsive"/>
+                    <img src="img/raymon.jpg" class="user-image img-responsive"/>
 					</li>
 				
 					
                     <li>
-                        <a class="active-menu"  href="#"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a class="active-menu"  href="{{route('insert_guru')}}"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                      <li>
                         <a  href="ui"><i class="fa fa-desktop fa-3x"></i> UI Elements</a>
