@@ -34,8 +34,9 @@ Routes untuk binary admin selesai
 */
 
 //Route::get('/', 'WelcomeController@index');
-
-Route::get('/testing', 'WelcomeController@testing');
+Route::get('/testing', function () {
+    return view('content/scadmin/dashboard');
+});
 
 Route::get('home', 'HomeController@index');
 
@@ -49,3 +50,4 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
