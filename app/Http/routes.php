@@ -34,10 +34,6 @@ Routes untuk binary admin selesai
 */
 
 //Route::get('/', 'WelcomeController@index');
-Route::get('/testing', function () {
-    return view('content/scadmin/dashboard');
-});
-
 Route::get('home', 'HomeController@index');
 
 Route::get('insert_guru',['as'=>'insert_guru','uses'=>'CrudController@insert_guru']);
@@ -51,3 +47,16 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+//Route untuk view masih kasar
+
+Route::get('/scadmin', function () {
+    return view('content/scadmin/dashboard');
+});
+
+Route::get('/scguru', function () {
+    return view('content/scguru/dashboard');
+});
+
+Route::get('/scsiswa', function () {
+    return view('content/scsiswa/dashboard');
+});
