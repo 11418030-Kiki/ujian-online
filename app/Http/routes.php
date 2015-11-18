@@ -40,14 +40,22 @@ Route::get('/testing', function () {
 
 Route::get('home', 'HomeController@index');
 
-Route::get('insert_guru',['as'=>'insert_guru','uses'=>'CrudController@insert_guru']);
+Route::get('insert_guru',['as'=>'insert_guru','uses'=>'AdminController@insert_guru']);
 
-Route::get('insert_siswa',['as'=>'insert_siswa','uses'=>'CrudController@insert_siswa']);
+Route::get('insert_siswa',['as'=>'insert_siswa','uses'=>'AdminController@insert_siswa']);
+
+/* Rombel */
+Route::get('insert_rombel', ['as'=>'insert_rombel','uses'=>'AdminController@insert_rombel']);
+
+/* Ujian */
+Route::get('insert_ujian', ['aas'=>'insert_ujian','uses'=>'AdminController@insert_ujian']);
 
 Route::get('jurusan', 'AdminController@show_all_jurusan');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+
+
 ]);
 
