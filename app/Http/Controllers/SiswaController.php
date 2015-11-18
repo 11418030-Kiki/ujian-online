@@ -18,6 +18,11 @@ class SiswaController extends Controller {
 		$Siswas = Siswa::getAll();
 	}
 
+	public function tampil()
+	{
+		return view('siswa/form');
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *

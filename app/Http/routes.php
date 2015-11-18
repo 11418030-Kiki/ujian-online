@@ -60,3 +60,21 @@ Route::get('/scguru', function () {
 Route::get('/scsiswa', function () {
     return view('content/scsiswa/dashboard');
 });
+
+
+Route::get('insert_guru',['as'=>'insert_guru','uses'=>'CrudController@insert_guru']);
+
+Route::get('insert_siswa',['as'=>'insert_siswa','uses'=>'CrudController@insert_siswa']);
+
+Route::get('insert_jurusan',['as'=>'insert_jurusan','uses'=>'CrudController@insert_jurusan']);
+
+Route::get('insert_mapel',['as'=>'insert_mapel','uses'=>'CrudController@insert_mapel']);
+
+
+Route::get('list_guru',['as'=>'list_guru','uses'=>'CrudController@list_guru']);
+
+Route::get('list_siswa',['as'=>'list_siswa','uses'=>'CrudController@list_siswa']);
+
+Route::get('list_jurusan',['as'=>'list_jurusan','uses'=>'CrudController@list_jurusan']);
+
+Route::get('list_mapel',['as'=>'list_mapel','uses'=>'CrudController@list_mapel']);
