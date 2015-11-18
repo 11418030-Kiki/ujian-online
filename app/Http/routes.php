@@ -66,6 +66,10 @@ Route::get('/scadmin', function () {
     return view('content/scadmin/dashboard');
 });
 
+Route::get('/scadmin/insert_jurusan', function () {
+    return view('content/scadmin/insert_jurusan');
+});
+
 Route::get('/scguru', function () {
     return view('content/scguru/dashboard');
 });
