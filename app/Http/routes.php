@@ -50,7 +50,7 @@ Route::controllers([
 //Route untuk view masih kasar
 
 Route::get('/scadmin', function () {
-    return view('content/scadmin/dashboard');
+    return view('content/scadmin/insert_mapel');
 });
 
 Route::get('/scadmin/insert_jurusan', function () {

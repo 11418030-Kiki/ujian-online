@@ -40,6 +40,7 @@
     <!-- /#wrapper -->
 
     <!-- JS -->
+    @yield('page_script')
 
     <script src="{{asset('assets/js/libraries/jquery-1.11.3.min.js')}}"></script> <!-- jQuery -->
     <script src="{{asset('assets/js/libraries/boostrap.min.js')}}"></script> <!-- Boostrap JS -->
