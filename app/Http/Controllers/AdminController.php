@@ -127,6 +127,16 @@ class AdminController extends Controller {
 	{
 		return view('/content/scadmin/list_mapel');
 	}
+
+	public function insert_rombel()
+	{
+		return view('/content/scadmin/insert_rombel');
+	}
+
+	public function insert_ujian()
+	{
+		return view('/content/scadmin/insert_ujian');
+	}
 	/*
 	public function index()
     {
