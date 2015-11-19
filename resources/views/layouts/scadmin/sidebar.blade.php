@@ -9,11 +9,52 @@
                 <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
             </li>
             <li>
-                <a href="ui.html"><i class="fa fa-desktop fa-3x"></i> Siswa</a>
-            </li>
+                 <a href="#"><i class="fa fa-group fa-3x"></i> Siswa<span class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level">
+                      <li>
+                        <a href="{{route('insert_siswa')}}">Tambah Data Siswa</a>
+                      </li>
+                       <li>
+                         <a href="{{route('insert_siswa')}}">Data Siswa</a>
+                      </li>
+                         
+                 </ul>
+            </li>   
             <li>
-                <a href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Guru</a>
-            </li>
+                 <a href="#"><i class="fa fa-user fa-3x"></i>  Guru<span class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level">
+                       <li>
+                         <a href="{{route('insert_guru')}}">Tambah Data Guru</a>
+                       </li>
+                       <li>
+                         <a href="{{route('insert_siswa')}}">Data Guru</a>
+                       </li>    
+                </ul>
+            </li>  
+            <li>
+                       <a href="#"><i class="fa fa-edit fa-3x"></i> Jurusan<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{route('insert_jurusan')}}">Tambah Data Jurusan</a>
+                            </li>
+                            <li>
+                                <a href="{{route('insert_siswa')}}">Data Jurusan</a>
+                            </li>
+                         
+                        </ul>
+            </li>  
+            <li>
+                       <a href="#"><i class="fa fa-book fa-3x"></i>Mata Pelajaran<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{route('insert_mapel')}}">Tambah Mata Pelajaran</a>
+                            </li>
+                            <li>
+                                <a href="{{route('insert_siswa')}}">Data Mata Pelajaran</a>
+                            </li>
+                         
+                        </ul>
+           </li>    
             <li>
                 <a href="chart"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
             </li>   

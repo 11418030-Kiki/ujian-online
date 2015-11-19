@@ -47,6 +47,8 @@
     <script src="{{asset('assets/js/plugins/jquery/jquery.metisMenu.js')}}"></script> <!-- MetisMenu JS -->
     <script src="{{asset('assets/js/plugins/morris/raphael-2.1.0.min.js')}}"></script> <!-- Morris Chart JS -->
     <script src="{{asset('assets/js/plugins/morris/morris.js')}}"></script> <!-- Morris Chart JS -->
+    <script src="{{asset('assets/js/plugins/jquery.uploadPreview.js')}}"></script>
+    <script src="{{asset('assets/js/plugins/jquery.uploadPreview.min.js')}}"></script>
     <script src="{{asset('assets/js/custom.js')}}"></script> <!-- base JS -->
 
 </body>
