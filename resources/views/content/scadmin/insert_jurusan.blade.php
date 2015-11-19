@@ -10,9 +10,9 @@
 						<h3>Tambah Jurusan</h3>
 					</div>
 					<div class="panel-body">
-						<form role="form" class="form-horizontal" id="form" name="insertdatasiswa" method="post" action="#" enctype="multipart/form-data">
+						<form role="form" class="form-horizontal" id="form" name="insert_jurusan" method="post" action="#" enctype="multipart/form-data">
 							<div class="form-group">
-								<label class="col-lg-2 col-md-2 col-sm-2" for="nip">Kode Jurusan</label>
+								<label class="col-lg-2 col-md-2 col-sm-2" for="jurusan">Kode Jurusan</label>
 								<div class="col-lg-10 col-md-10 col-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon">&nbsp;&nbsp;&nbsp;</span>
