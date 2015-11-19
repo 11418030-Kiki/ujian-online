@@ -86,9 +86,31 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                          
                         </ul>
                       </li>   
-                  <li  >
-                        <a  href="blank"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                    </li>	
+                      <li>
+                       <a href="#"><i class="fa fa-edit fa-3x"></i> Data Jurusan<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{route('insert_jurusan')}}">Insert Jurusan</a>
+                            </li>
+                            <li>
+                                <a href="{{route('insert_siswa')}}">Daftar Jurusan</a>
+                            </li>
+                         
+                        </ul>
+                      </li>   
+                      <li>
+                       <a href="#"><i class="fa fa-book fa-3x"></i> Data Mata Pelajaran<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{route('insert_mapel')}}">Insert Mata Pelajaran</a>
+                            </li>
+                            <li>
+                                <a href="{{route('insert_siswa')}}">Daftar Mata Pelajaran</a>
+                            </li>
+                         
+                        </ul>
+                      </li>   
+                  
                 </ul>
                
             </div>
