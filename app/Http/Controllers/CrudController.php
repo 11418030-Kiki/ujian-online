@@ -30,41 +30,41 @@ class CrudController extends Controller {
 	 */
 	public function insert_guru()
 	{
-		return view('/admin/insert_guru');
+		return view('/content/scadmin/insert_guru');
 	}
 
 	public function insert_siswa()
 	{
-		return view('/admin/insert_siswa');
+		return view('/content/scadmin/insert_siswa');
 	}
 
 	public function insert_jurusan()
 	{
-		return view('/admin/insert_jurusan');
+		return view('/content/scadmin/insert_jurusan');
 	}
 
 	public function insert_mapel()
 	{
-		return view('/admin/insert_mapel');
+		return view('/content/scadmin/insert_mapel');
 	}
 
 	public function list_guru()
 	{
-		return view('/admin/list_guru');
+		return view('/content/scadmin/list_guru');
 	}
 
 	public function list_siswa()
 	{
-		return view('/admin/list_siswa');
+		return view('/content/scadmin/list_siswa');
 	}
 
 	public function list_jurusan()
 	{
-		return view('/admin/list_jurusan');
+		return view('/content/scadmin/list_jurusan');
 	}
 
 	public function list_mapel()
 	{
-		return view('/admin/list_mapel');
+		return view('/content/scadmin/list_mapel');
 	}
 }

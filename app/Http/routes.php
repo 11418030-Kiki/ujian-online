@@ -14,7 +14,7 @@
 /*
 Mulai Routes untuk binary admin
 */
-Route::get('/', 'BinaryController@index');
+Route::get('admin/', 'AdminController@index');
 
 Route::get('blank','BinaryController@show_blank');
 
