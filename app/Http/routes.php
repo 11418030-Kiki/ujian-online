@@ -40,10 +40,15 @@ Route::get('insert_guru',['as'=>'insert_guru','uses'=>'AdminController@insert_gu
 
 Route::get('insert_siswa',['as'=>'insert_siswa','uses'=>'AdminController@insert_siswa']);
 
+/* Rombel */
+Route::get('insert_rombel', ['as'=>'insert_rombel','uses'=>'AdminController@insert_rombel']);
+
+/* Ujian */
+Route::get('insert_ujian', ['aas'=>'insert_ujian','uses'=>'AdminController@insert_ujian']);
+
 Route::get('insert_jurusan',['as'=>'insert_jurusan','uses'=>'AdminController@insert_jurusan']);
 
 Route::get('insert_mapel',['as'=>'insert_mapel','uses'=>'AdminController@insert_mapel']);
-
 
 Route::get('list_guru',['as'=>'list_guru','uses'=>'AdminController@list_guru']);
 
@@ -58,6 +63,8 @@ Route::get('jurusan', 'AdminController@show_all_jurusan');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+
+
 ]);
 
 //Route untuk view masih kasar
