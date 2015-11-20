@@ -1,8 +1,10 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     11/16/2015 10:33:52 PM                       */
+/* Created on:     11/20/2015 10:20:44 PM                       */
 /*==============================================================*/
 
+
+drop table if exists ADMIN;
 
 drop table if exists GURU;
 
@@ -47,6 +49,17 @@ drop table if exists STATUS_GURU_TO_UJIAN;
 drop table if exists UJIAN;
 
 /*==============================================================*/
+/* Table: ADMIN                                                 */
+/*==============================================================*/
+create table ADMIN
+(
+   ID                   int not null AUTO_INCREMENT,
+   USER_NAME            varchar(100) not null,
+   PASSWORD             varchar(100) not null,
+   primary key (ID)
+);
+
+/*==============================================================*/
 /* Table: GURU                                                  */
 /*==============================================================*/
 create table GURU
@@ -54,8 +67,9 @@ create table GURU
    NIP                  varchar(50) not null,
    NUPTK                varchar(50),
    NAMA                 varchar(100) not null,
-   TEMPAT_TGL_LAHIR     varchar(100),
    JENIS_KELAMIN        varchar(1) not null,
+   TEMPAT_LAHIR         varchar(100),
+   TANGGAL_LAHIR        date,
    ALAMAT               varchar(100),
    NO_TELEPON           varchar(30),
    IS_ACTIVE            bool not null,
@@ -129,7 +143,7 @@ create table JURUSAN_MASTER
 (
    KD_JURUSAN           varchar(50) not null,
    NAMA_JURUSAN         varchar(100) not null,
-   DESKRIPISI           varchar(255),
+   DESKRIPSI            varchar(255),
    primary key (KD_JURUSAN)
 );
 
@@ -237,8 +251,9 @@ create table SISWA
    KD_JURUSAN           varchar(50) not null,
    NISN                 varchar(50),
    NAMA                 varchar(100) not null,
-   TEMPAT_TGL_LAHIR     varchar(100),
    JENIS_KELAMIN        varchar(1) not null,
+   TEMPAT_LAHIR         varchar(100),
+   TANGGAL_LAHIR        date,
    ALAMAT               varchar(100),
    NO_TELEPON           varchar(30),
    IS_ACTIVE            bool not null,
