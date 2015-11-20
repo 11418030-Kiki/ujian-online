@@ -1,8 +1,9 @@
 @extends('layouts.scadmin.base')
 
 @section('content')
+<link href="{{asset('assets/css/form-style.css')}}" rel="stylesheet"/>
 <div class="container">
-	<div class="panel panel-default"  style="margin-left:80px;margin-right:80px;">
+	<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 style="margin-left:0px;margin-top:-6px;">Insert Data Guru</h3>
 				</div>
@@ -15,7 +16,7 @@
 					<label class="col-sm-2"  for="nip">NIP</label>
 						<div class="input-group">
 						    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="number" class="form-control" name="nip" placeholder="Masukkan NIP" required="required" >
+						    	<input type="text" class="form-control" name="nip" placeholder="Masukkan NIP" required="required" >
 						</div> 
 						<span style="margin-left:240px;"></span>          
 				</div>	
@@ -24,7 +25,7 @@
 					<label class="col-sm-2"  for="nuptk">NUPTK</label>
 						<div class="input-group">
 						    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="number" class="form-control" name="nuptk" placeholder="Masukkan NUPTK" required="required" >
+						    	<input type="text" class="form-control" name="nuptk" placeholder="Masukkan NUPTK" required="required" >
 						</div> 
 						<span style="margin-left:240px;"></span>          
 				</div>	

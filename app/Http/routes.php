@@ -14,7 +14,7 @@
 /*
 Mulai Routes untuk binary admin
 */
-Route::get('admin/', 'AdminController@index');
+Route::get('/', 'AdminController@index');
 
 Route::get('blank','BinaryController@show_blank');
 
@@ -61,7 +61,6 @@ Route::get('/scsiswa', function () {
     return view('content/scsiswa/dashboard');
 });
 
-
 Route::get('insert_guru',['as'=>'insert_guru','uses'=>'CrudController@insert_guru']);
 
 Route::get('insert_siswa',['as'=>'insert_siswa','uses'=>'CrudController@insert_siswa']);
@@ -75,6 +74,16 @@ Route::get('list_guru',['as'=>'list_guru','uses'=>'CrudController@list_guru']);
 
 Route::get('list_siswa',['as'=>'list_siswa','uses'=>'CrudController@list_siswa']);
 
-Route::get('list_jurusan',['as'=>'list_jurusan','uses'=>'CrudController@list_jurusan']);
+
 
 Route::get('list_mapel',['as'=>'list_mapel','uses'=>'CrudController@list_mapel']);
+
+
+Route::get('list_jurusan',['as'=>'list_jurusan','uses'=>'AdminController@list_jurusan']);
+
+Route::get('form_insert_jurusan',function() {
+	return view('content/scadmin/insert_jurusan');
+});
+
+Route::post('form_insert_jurusan/add','AdminController@addJurusan');
+Route::post('add_guru','AdminController@addGuru');
