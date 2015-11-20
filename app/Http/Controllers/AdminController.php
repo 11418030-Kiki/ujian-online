@@ -91,6 +91,7 @@ class AdminController extends Controller {
 		//return 'berhasil kuda';
 	}
 
+
 	public function list_jurusan()
 	{
 		$jurusans = Jurusan::all();
@@ -115,6 +116,52 @@ class AdminController extends Controller {
 		$jurusan->NAMA_JURUSAN = Input::get('nama_jurusan');
 		$jurusan->DESKRIPSI = Input::get('deskripsi');
 		$jurusan->save();
+	}
+	
+
+	public function insert_guru()
+	{
+		return view('/content/scadmin/insert_guru');
+	}
+
+	public function insert_siswa()
+	{
+		return view('/content/scadmin/insert_siswa');
+	}
+
+	public function insert_jurusan()
+	{
+		return view('/content/scadmin/insert_jurusan');
+	}
+
+	public function insert_mapel()
+	{
+		return view('/content/scadmin/insert_mapel');
+	}
+
+	public function list_guru()
+	{
+		return view('/content/scadmin/list_guru');
+	}
+
+	public function list_siswa()
+	{
+		return view('/content/scadmin/list_siswa');
+	}
+
+	public function list_mapel()
+	{
+		return view('/content/scadmin/list_mapel');
+	}
+
+	public function insert_rombel()
+	{
+		return view('/content/scadmin/insert_rombel');
+	}
+
+	public function insert_ujian()
+	{
+		return view('/content/scadmin/insert_ujian');
 	}
 	
 	/*

@@ -1,116 +1,162 @@
 @extends('layouts.scadmin.base')
 
 @section('content')
-<link href="{{asset('assets/css/form-style.css')}}" rel="stylesheet"/>
-<div class="container">
-	<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 style="margin-left:0px;margin-top:-6px;">Insert Data Guru</h3>
-				</div>
-			
-				<div class="panel-body">
+<div id="main-content-wrapper">
+	<div class="container-fluid">
+		<div class="col-lg-12">
+			<div class="content clearfix">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>Tambah Guru</h3>
+					</div>
+					<div class="panel-body">
 						
 				<form role="form" class="form-horizontal" id="form" name="insertdataguru" method="post" action="#" enctype="multipart/form-data">
 
 				<div class="form-group">
-					<label class="col-sm-2"  for="nip">NIP</label>
-						<div class="input-group">
-						    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="text" class="form-control" name="nip" placeholder="Masukkan NIP" required="required" >
-						</div> 
-						<span style="margin-left:240px;"></span>          
-				</div>	
-
-				<div class="form-group">
-					<label class="col-sm-2"  for="nuptk">NUPTK</label>
-						<div class="input-group">
-						    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="text" class="form-control" name="nuptk" placeholder="Masukkan NUPTK" required="required" >
-						</div> 
-						<span style="margin-left:240px;"></span>          
-				</div>	
-
-				<div class="form-group">
-					<label class="col-sm-2"  for="name">Nama</label>
-						<div class="input-group">
-						    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="text" class="form-control" name="name" placeholder="Masukkan Nama Lengkap" required="required" >
-						</div> 
-						<span style="margin-left:240px;"></span>          
-				</div>
-
-				<div class="form-group">
-					<label class="col-sm-2"  for="ttl">TTL</label>
-						<div class="input-group">
-						    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="text" class="form-control" id="code" name="ttl" placeholder="Masukkan Tempat,Tanggal Lahir | Contoh: (Batam,20 Juni 1992) " required="required" >
-						</div> 
-						<span style="margin-left:240px;"></span>          
-				</div>	
-
-				<div class="form-group">
-					<label class="col-sm-2"  for="jeniskelamin">Jenis Kelamin</label>
-						<div class="input-group">
-						    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    
-						    <select class="form-control" name="jeniskelamin">
-						    	<option></option>
-						    	<option>PRIA</option>
-						    	<option>WANITA</option>
-
-							</select>	
-						    	
+						<label class="col-lg-2 col-md-2 col-sm-2" for="nip">NIP</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon">&nbsp;&nbsp;&nbsp;</span>
+								<input type="number" class="form-control" name="nip" placeholder="Masukkan NIP" required="required">
+							</div>        
 						</div>
-						<span style="margin-left:240px;"></span>           
+				</div>	
+
+				<div class="form-group">
+					<label class="col-lg-2 col-md-2 col-sm-2" for="nuptk">NUPTK</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							    <input type="number" class="form-control" name="nuptk" placeholder="Masukkan NUPTK" required="required" >
+							</div> 
+						</div>	      
+				</div>	
+
+				<div class="form-group">
+				<label class="col-lg-2 col-md-2 col-sm-2" for="nama">Nama</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							    <input type="text" class="form-control" name="name" placeholder="Masukkan Nama Lengkap" required="required" >
+							</div> 
+						</div>	
+						<!-- <span style="margin-left:240px;"></span>    -->       
 				</div>
 
 				<div class="form-group">
-					<label class="col-sm-2"  for="alamat">Alamat</label>
-						<div class="input-group">
-						    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<textarea type="text" class="form-control"  name="alamat" placeholder="Masukkan Alamat Lengkap" required="required" ></textarea>
-						</div> 
-						<span style="margin-left:240px;"></span>          
+					<label class="col-lg-2 col-md-2 col-sm-2" for="ttl">TTL</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							    <input type="text" class="form-control" id="code" name="ttl" placeholder="Masukkan Tempat,Tanggal Lahir | Contoh: (Batam,20 Juni 1992) " required="required" >
+							</div> 
+						</div>	
+						<!-- <span style="margin-left:240px;"></span>     -->      
+				</div>	
+
+				<div class="form-group">
+					<label class="col-lg-2 col-md-2 col-sm-2" for="jeniskelamin">Jenis Kelamin</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							    
+							    <select class="form-control" name="jeniskelamin">
+							    
+							    	<option>Laki-laki</option>
+							    	<option>Perempuan</option>
+
+								</select>	
+							    	
+							</div>
+						</div>	
+						<!-- <span style="margin-left:240px;"></span>   -->         
 				</div>
 
 				<div class="form-group">
-					<label class="col-sm-2"  for="no_telp">No.Telp</label>
-						<div class="input-group">
-						    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="number" class="form-control" name="no_telp" placeholder="Masukkan Nomor Telepon" required="required" >
-						</div> 
-						<span style="margin-left:240px;"></span>          
+					<label class="col-lg-2 col-md-2 col-sm-2" for="alamat">Alamat</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							    	<textarea type="text" class="form-control"  name="alamat" placeholder="Masukkan Alamat Lengkap" required="required" ></textarea>
+							</div> 
+						<!-- <span style="margin-left:240px;"></span>  -->     
+						</div>    
+				</div>
+
+				<div class="form-group">
+					<label class="col-lg-2 col-md-2 col-sm-2" for="notelp">Nomor Telepon</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							    <input type="number" class="form-control" name="no_telp" placeholder="Masukkan Nomor Telepon" required="required" >
+							</div> 
+						<!-- <span style="margin-left:240px;"></span>    -->  
+						</div>     
 				</div>		
 
 				<div class="form-group">
-					<label class="col-sm-2"  for="username">Username</label>
-						<div class="input-group">
-						    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						    	<input type="text" class="form-control" name="username" placeholder="Masukkan Username" required="required" >
+					<label class="col-lg-2 col-md-2 col-sm-2" for="username">Username</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							    <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required="required" >
+							</div> 
+						<!-- <span style="margin-left:240px;"></span>      -->    
 						</div> 
-						<span style="margin-left:240px;"></span>          
 				</div>	
 
 
 				<div class="form-group">
-					<label class="col-sm-2"  for="password">Password</label>
+					<label class="col-lg-2 col-md-2 col-sm-2" for="password">Password</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
 						<div class="input-group">
 						    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
 						    	<input type="password" class="form-control" name="password" placeholder="Masukkan Password" required="required" >
 						</div> 
-						<span style="margin-left:240px;"></span>          
+					</div>
+						<!-- <span style="margin-left:240px;"></span>    -->       
 				</div>
 
 				<div class="form-group">
-					<label class="col-sm-2"  for="photo">Photo</label>
-						<input type="file" name='photo' id='photo' >
-    					   
-				</div>
+					<div id="image-preview">
+						<label class="col-lg-2 col-md-2 col-sm-2" for="photo">Photo</label>
+						<div class="col-lg-10 col-md-10 col-sm-10">
+							<div class="input-group">
+							<input type="file" name='photo' id='photo' >
+    						</div>  
+    					</div>	 
+					</div>
 				
-					<button type="submit" div class="btn btn-primary pull-right" name="submit">Save</button>
-			
 				</div>
+		<!-- 	<div class="form-group">
+					<div id="image-preview">
+						  <label for="image-upload" id="image-label">Choose File</label>
+						  <input type="file" name="image" id="image-upload" />
+					</div>	
+			</div> -->
+			</form>
+			<div class="col-md-10">
+			</div>
+			<div class="btn-menu col-md-2">
+				<a href="#" id="btn-save-guru" class="btn btn-block btn-primary">Simpan</a>
+			</div>
+
 		</div>
 		</div>	
 </div>
 @stop
+
+@section('page_script')
+<script type="text/javascript">
+$(document).ready(function() {
+  $.uploadPreview({
+    input_field: "#image-upload",   // Default: .image-upload
+    preview_box: "#image-preview",  // Default: .image-preview
+    label_field: "#image-label",    // Default: .image-label
+    label_default: "Choose File",   // Default: Choose File
+    label_selected: "Change File",  // Default: Change File
+    no_label: false                 // Default: false
+  });
+});
+</script>
