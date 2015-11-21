@@ -14,7 +14,7 @@
 /*
 Mulai Routes untuk binary admin
 */
-Route::get('/', 'BinaryController@index');
+Route::get('/', 'AdminController@index');
 
 Route::get('blank','BinaryController@show_blank');
 
@@ -84,3 +84,16 @@ Route::get('/scguru', function () {
 Route::get('/scsiswa', function () {
     return view('content/scsiswa/dashboard');
 });
+
+
+
+Route::get('list_jurusan',['as'=>'list_jurusan','uses'=>'AdminController@list_jurusan']);
+
+Route::get('form_insert_jurusan',function() {
+	return view('content/scadmin/insert_jurusan');
+});
+
+Route::post('form_insert_jurusan/add','AdminController@addJurusan');
+
+Route::post('add_guru','AdminController@addGuru');
+
