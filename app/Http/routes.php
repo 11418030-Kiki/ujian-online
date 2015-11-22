@@ -60,17 +60,17 @@ Route::get('list_mapel',['as'=>'list_mapel','uses'=>'AdminController@list_mapel'
 
 Route::get('jurusan', 'AdminController@show_all_jurusan');
 
-Route::controllers([
+/*Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 
 
-]);
+]);*/
 
 //Route untuk view masih kasar
 
-Route::get('/scadmin', function () {
-    return view('content/scadmin/dashboard');
+Route::get('/scadmin/login', function () {
+    return view('content/login/login_form');
 });
 
 Route::get('/scadmin/insert_jurusan', function () {
