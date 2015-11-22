@@ -29,7 +29,6 @@
 									</div>           
 								</div>
 							</div>
-
 						</form>
 						<div class="col-lg-10 col-md-10">
 						</div>

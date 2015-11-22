@@ -1,6 +1,6 @@
 @extends('layouts.scadmin.base')
 
-@section('content')
+@section('content') 
 <div id="main-content-wrapper">
     <div class="container-fluid">
         <div class="col-lg-12">
@@ -48,6 +48,15 @@
                                 </div>        
                             </div>
                             <div class="form-group">
+                                <label class="col-lg-2 col-md-2 col-sm-2" for="name">Waktu Mulai Ujian</label>
+                                <div id="datetimepicker2" class="input-append">
+                                    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
+                                    <span class="add-on">
+                                        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+                                    </span>
+                                </div>        
+                            </div>
+                            <div class="form-group">
                                 <label class="col-lg-2 col-md-2 col-sm-2" for="name">Waktu Selesai Ujian</label>
                                 <div class="col-lg-10 col-md-10 col-sm-10">
                                     <div class="input-group">
@@ -86,4 +95,15 @@
         </div>
     </div>
 </div>                
+@stop
+
+@section('page_script')
+<script type="text/javascript">
+    $(function() {
+        $('#datetimepicker2').datetimepicker({
+            language: 'en',
+            pick12HourFormat: true
+        });
+    });
+</script>
 @stop

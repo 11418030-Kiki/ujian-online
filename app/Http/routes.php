@@ -14,7 +14,7 @@
 /*
 Mulai Routes untuk binary admin
 */
-Route::get('/', 'BinaryController@index');
+Route::get('/', 'AdminController@index');
 
 Route::get('blank','BinaryController@show_blank');
 
@@ -74,17 +74,17 @@ Route::get('detail_jurusan',['as'=>'detail_jurusan','uses'=>'AdminController@det
 
 Route::get('jurusan', 'AdminController@show_all_jurusan');
 
-Route::controllers([
+/*Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 
 
-]);
+]);*/
 
 //Route untuk view masih kasar
 
-Route::get('/scadmin', function () {
-    return view('content/scadmin/dashboard');
+Route::get('/scadmin/login', function () {
+    return view('content/login/login_form');
 });
 
 Route::get('/scadmin/insert_jurusan', function () {
@@ -98,3 +98,22 @@ Route::get('/scguru', function () {
 Route::get('/scsiswa', function () {
     return view('content/scsiswa/dashboard');
 });
+
+
+
+Route::get('list_jurusan',['as'=>'list_jurusan','uses'=>'AdminController@list_jurusan']);
+
+Route::get('form_insert_jurusan',function() {
+	return view('content/scadmin/insert_jurusan');
+});
+
+Route::post('form_insert_jurusan/add','AdminController@addJurusan');
+
+Route::post('add_guru','AdminController@addGuru');
+
+Route::get('proses_ujian',function(){
+	return view('content/scsiswa/prosesujian');
+});
+
+Route::get('mapping_jurusan/{id}', 'AdminController@mapel_to_jurusan');
+

@@ -4,6 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jurusan;
+use App\Models\Guru;
+use App\Models\MapelToJurusan;
+use Input;
 
 class AdminController extends Controller {
 
@@ -15,6 +18,13 @@ class AdminController extends Controller {
 	public function index()
 	{
 		//
+		return view('/content/scadmin/insert_guru');
+	}
+
+	public function mapel_to_jurusan($id)
+	{
+		$hasil = Jurusan::find($id)->mapelsLegacy();
+		return $hasil;
 	}
 
 	/**
@@ -88,6 +98,34 @@ class AdminController extends Controller {
 		//return 'berhasil kuda';
 	}
 
+
+	public function list_jurusan()
+	{
+		$jurusans = Jurusan::all();
+		//return $jurusans;
+		return view('/content/scadmin/list_jurusan')->with('banyak_jurusan', $jurusans);
+	}
+
+	public function addGuru(Request $request)
+	{
+		$guru = new Guru;
+
+		$guru->NIP = $request->NIP;
+		$guru->NUPTK = $request->NUPTK;
+		$guru->nama = $request->nama;
+		$guru->TTL = $request->TTL;
+	}
+
+	public function addJurusan(Request $request)
+	{	
+		$jurusan = new Jurusan;
+		$jurusan->KD_JURUSAN = Input::get('kd_jurusan');
+		$jurusan->NAMA_JURUSAN = Input::get('nama_jurusan');
+		$jurusan->DESKRIPSI = Input::get('deskripsi');
+		$jurusan->save();
+	}
+	
+
 	public function insert_guru()
 	{
 		return view('/content/scadmin/insert_guru');
@@ -118,11 +156,6 @@ class AdminController extends Controller {
 		return view('/content/scadmin/list_siswa');
 	}
 
-	public function list_jurusan()
-	{
-		return view('/content/scadmin/list_jurusan');
-	}
-
 	public function list_mapel()
 	{
 		return view('/content/scadmin/list_mapel');
@@ -137,6 +170,7 @@ class AdminController extends Controller {
 	{
 		return view('/content/scadmin/insert_ujian');
 	}
+<<<<<<< HEAD
 
 	public function update_siswa()
 	{
@@ -172,6 +206,9 @@ class AdminController extends Controller {
 	{
 		return view('/content/scadmin/detail_jurusan');
 	}
+=======
+	
+>>>>>>> cdbba2339f168a46827136059b37471482213ef4
 	/*
 	public function index()
     {
