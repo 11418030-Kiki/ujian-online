@@ -170,7 +170,6 @@ class AdminController extends Controller {
 	{
 		return view('/content/scadmin/insert_ujian');
 	}
-<<<<<<< HEAD
 
 	public function update_siswa()
 	{
@@ -206,15 +205,12 @@ class AdminController extends Controller {
 	{
 		return view('/content/scadmin/detail_jurusan');
 	}
-=======
-	
->>>>>>> cdbba2339f168a46827136059b37471482213ef4
-	/*
-	public function index()
-    {
-        $flights = Flight::all();
 
-        return view('flight.index', ['flights' => $flights]);
-    }
-    */
+	// public function index()
+ //    {
+ //        $flights = Flight::all();
+
+ //        return view('flight.index', ['flights' => $flights]);
+ //    }
+   
 }
