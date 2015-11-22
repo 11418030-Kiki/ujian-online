@@ -58,6 +58,20 @@ Route::get('list_jurusan',['as'=>'list_jurusan','uses'=>'AdminController@list_ju
 
 Route::get('list_mapel',['as'=>'list_mapel','uses'=>'AdminController@list_mapel']);
 
+Route::get('update_siswa',['as'=>'update_siswa','uses'=>'AdminController@update_siswa']);
+
+Route::get('update_guru',['as'=>'update_guru','uses'=>'AdminController@update_guru']);
+
+Route::get('update_mapel',['as'=>'update_mapel','uses'=>'AdminController@update_mapel']);
+
+Route::get('update_jurusan',['as'=>'update_jurusan','uses'=>'AdminController@update_jurusan']);
+
+Route::get('detail_siswa',['as'=>'detail_siswa','uses'=>'AdminController@detail_siswa']);
+
+Route::get('detail_guru',['as'=>'detail_guru','uses'=>'AdminController@detail_guru']);
+
+Route::get('detail_jurusan',['as'=>'detail_jurusan','uses'=>'AdminController@detail_jurusan']);
+
 Route::get('jurusan', 'AdminController@show_all_jurusan');
 
 Route::controllers([

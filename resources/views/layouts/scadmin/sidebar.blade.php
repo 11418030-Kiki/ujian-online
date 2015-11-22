@@ -27,7 +27,7 @@
                          <a href="{{route('insert_guru')}}">Tambah Data Guru</a>
                        </li>
                        <li>
-                         <a href="{{route('insert_siswa')}}">Data Guru</a>
+                         <a href="{{route('list_guru')}}">Data Guru</a>
                        </li>    
                 </ul>
             </li>  
@@ -38,7 +38,7 @@
                                 <a href="{{route('insert_jurusan')}}">Tambah Data Jurusan</a>
                             </li>
                             <li>
-                                <a href="{{route('insert_siswa')}}">Data Jurusan</a>
+                                <a href="{{route('list_jurusan')}}">Data Jurusan</a>
                             </li>
                          
                         </ul>
@@ -50,7 +50,7 @@
                                 <a href="{{route('insert_mapel')}}">Tambah Mata Pelajaran</a>
                             </li>
                             <li>
-                                <a href="{{route('insert_siswa')}}">Data Mata Pelajaran</a>
+                                <a href="{{route('list_mapel')}}">Data Mata Pelajaran</a>
                             </li>
                          
                         </ul>

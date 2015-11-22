@@ -137,6 +137,41 @@ class AdminController extends Controller {
 	{
 		return view('/content/scadmin/insert_ujian');
 	}
+
+	public function update_siswa()
+	{
+		return view('/content/scadmin/update_siswa');
+	}
+
+	public function update_guru()
+	{
+		return view('/content/scadmin/update_guru');
+	}
+
+	public function update_mapel()
+	{
+		return view('/content/scadmin/update_mapel');
+	}
+
+	public function update_jurusan()
+	{
+		return view('/content/scadmin/update_jurusan');
+	}
+
+	public function detail_siswa()
+	{
+		return view('/content/scadmin/detail_siswa');
+	}
+
+	public function detail_guru()
+	{
+		return view('/content/scadmin/detail_guru');
+	}
+
+	public function detail_jurusan()
+	{
+		return view('/content/scadmin/detail_jurusan');
+	}
 	/*
 	public function index()
     {

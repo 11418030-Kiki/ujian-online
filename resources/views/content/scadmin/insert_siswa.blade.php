@@ -12,7 +12,7 @@
 					<div class="panel-body">
 						
 				<form role="form" class="form-horizontal" id="form" name="insertdatasiswa" method="post" action="#" enctype="multipart/form-data">
-				
+			
 				<div class="form-group">
 					<label class="col-lg-2 col-md-2 col-sm-2" for="nomor_induk">Nomor Induk</label>
 						<div class="col-lg-10 col-md-10 col-sm-10">
@@ -63,18 +63,22 @@
 						<!-- <span style="margin-left:240px;"></span>   -->  
 						</div>      
 				</div>	
-
+	
 				<div class="form-group">
-				<label class="col-lg-2 col-md-2 col-sm-2" for="ttl">TTL</label>
-						<div class="col-lg-10 col-md-10 col-sm-10">
-							<div class="input-group">
-							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    <input type="text" class="form-control" id="code" name="ttl" placeholder="Masukkan Tempat,Tanggal Lahir | Contoh: (Batam,20 Juni 1992) " required="required" >
-							</div> 
-						<!-- <span style="margin-left:240px;"></span>  -->  
-						</div>       
-				</div>	
-
+				<label class="col-lg-2 col-md-2 col-sm-2" for="ttl">Tempat Tanggal Lahir</label>
+				<div class="col-sm-5 input">
+					<!-- <a data-toggle="tooltip" class="question" data-placement="right" title="Diisi dengan tempat dan tanggal lahir peserta kegiatan"><i class="fa fa-question-circle"></i></a> -->
+					<input type="text" class="form-control" id="emp_placebirth" name="emp_birthplace">
+				</div>
+				<div class="col-sm-3">
+					<div class="input-group date">
+						<input type="text" class="form-control datepicker" id="emp_datebirth" name="emp_birthdate">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
+				</div>
 				
 				<div class="form-group">
 					<label class="col-lg-2 col-md-2 col-sm-2" for="alamat">Alamat</label>
