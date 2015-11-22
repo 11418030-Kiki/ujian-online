@@ -97,3 +97,9 @@ Route::post('form_insert_jurusan/add','AdminController@addJurusan');
 
 Route::post('add_guru','AdminController@addGuru');
 
+Route::get('proses_ujian',function(){
+	return view('content/scsiswa/prosesujian');
+});
+
+Route::get('mapping_jurusan/{id}', 'AdminController@mapel_to_jurusan');
+

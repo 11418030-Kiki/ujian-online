@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jurusan;
 use App\Models\Guru;
+use App\Models\MapelToJurusan;
 use Input;
 
 class AdminController extends Controller {
@@ -18,6 +19,12 @@ class AdminController extends Controller {
 	{
 		//
 		return view('/content/scadmin/insert_guru');
+	}
+
+	public function mapel_to_jurusan($id)
+	{
+		$hasil = Jurusan::find($id)->mapelsLegacy();
+		return $hasil;
 	}
 
 	/**
