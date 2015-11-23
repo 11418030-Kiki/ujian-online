@@ -242,5 +242,6 @@ class AdminController extends Controller {
 
  //        return view('flight.index', ['flights' => $flights]);
  //    }
+ */
    
 }
