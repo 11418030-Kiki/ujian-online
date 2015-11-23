@@ -7,7 +7,7 @@
 			<div class="content clearfix">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3>Tambah Siswa</h3>
+						<h3>Perbarui Data Siswa</h3>
 					</div>
 					<div class="panel-body">
 						
@@ -18,7 +18,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-10">
 							<div class="input-group">
 							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    <input type="number" class="form-control" name="nomor_induk" placeholder="Masukkan Nomor Induk " required="required" >
+							    <input type="number" class="form-control" name="nomor_induk" required="required" >
 							</div> 
 						</div>	
 						<!-- <span style="margin-left:240px;"></span>    -->       
@@ -29,7 +29,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-10">
 							<div class="input-group">
 							    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    <input type="text" class="form-control" name="name" placeholder="Masukkan Nama Lengkap" required="required" >
+							    <input type="text" class="form-control" name="name" required="required" >
 							</div> 
 						<!-- <span style="margin-left:240px;"></span> --> 
 						</div>         
@@ -58,7 +58,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-10">
 							<div class="input-group">
 							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    <input type="number" class="form-control" name="nisn" placeholder="Masukkan Nomor Induk Siswa Nasional" required="required" >
+							    <input type="number" class="form-control" name="nisn" required="required" >
 							</div> 
 						<!-- <span style="margin-left:240px;"></span>   -->  
 						</div>      
@@ -85,7 +85,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-10">
 							<div class="input-group">
 							    	<span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    	<textarea type="text" class="form-control"  name="alamat" placeholder="Masukkan Alamat Lengkap" required="required" ></textarea>
+							    	<textarea type="text" class="form-control"  name="alamat" required="required" ></textarea>
 							</div> 
 						<!-- <span style="margin-left:240px;"></span>        -->   
 					</div>
@@ -96,7 +96,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-10">
 							<div class="input-group">
 							    <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    <input type="number" class="form-control" name="no_telp" placeholder="Masukkan Nomor Telepon" required="required" >
+							    <input type="number" class="form-control" name="no_telp" required="required" >
 							</div> 
 						<!-- <span style="margin-left:240px;"></span>     -->   
 						</div>   
@@ -107,7 +107,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-10">
 							<div class="input-group">
 							    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required="required" >
+							    <input type="text" class="form-control" name="username"  required="required" >
 							</div> 
 						<!-- <span style="margin-left:240px;"></span>   -->     
 						</div>   
@@ -119,7 +119,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-10">
 							<div class="input-group">
 							    <span class="input-group-addon" id="gambar1">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							    <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required="required" >
+							    <input type="password" class="form-control" name="password"  required="required" >
 							</div>
 					<!-- 	<span style="margin-left:240px;"></span>    -->  
 					</div>     
@@ -141,7 +141,7 @@
 			<div class="col-md-10">
 			</div>
 			<div class="btn-menu col-md-2">
-				<a href="#" id="btn-save-siswa" class="btn btn-block btn-primary">Simpan</a>
+				<a href="#" id="btn-save-siswa" class="btn btn-block btn-primary">Perbarui</a>
 			</div>
 			
 		</div>

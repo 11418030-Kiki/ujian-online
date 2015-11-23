@@ -19,7 +19,7 @@ class AdminController extends Controller {
 	public function index()
 	{
 		//
-		return view('/content/scadmin/insert_guru');
+		return view('/content/login/login_form');
 	}
 	
 	public function lihat_mapel($id)
@@ -187,6 +187,7 @@ class AdminController extends Controller {
 	{
 		return view('/content/scadmin/insert_ujian');
 	}
+
 	
 	public function detail_jurusan($idnya)
 	{
@@ -198,7 +199,48 @@ class AdminController extends Controller {
     {
         $flights = Flight::all();
 
-        return view('flight.index', ['flights' => $flights]);
-    }
-    */
+
+
+	public function update_siswa()
+	{
+		return view('/content/scadmin/update_siswa');
+	}
+
+	public function update_guru()
+	{
+		return view('/content/scadmin/update_guru');
+	}
+
+	public function update_mapel()
+	{
+		return view('/content/scadmin/update_mapel');
+	}
+
+	public function update_jurusan()
+	{
+		return view('/content/scadmin/update_jurusan');
+	}
+
+	public function detail_siswa()
+	{
+		return view('/content/scadmin/detail_siswa');
+	}
+
+	public function detail_guru()
+	{
+		return view('/content/scadmin/detail_guru');
+	}
+
+	public function detail_jurusan()
+	{
+		return view('/content/scadmin/detail_jurusan');
+	}
+
+	// public function index()
+ //    {
+ //        $flights = Flight::all();
+
+ //        return view('flight.index', ['flights' => $flights]);
+ //    }
+   
 }

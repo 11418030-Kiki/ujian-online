@@ -1,4 +1,3 @@
-
 @extends('layouts.scadmin.base')
 
 @section('content')
@@ -9,14 +8,14 @@
 			<div class="content clearfix">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3>Data Jurusan</h3>
+						<h3>Data Siswa</h3>
 					</div>	
 					<div class="panel-body">
               	   <table class="table table-bordered table-striped" style="border-radius:10px;">
                    <thead>
                    	<tr class="info">
-                    <th><center>Kode Jurusan</center></th>
-                    <th><center>Nama Jurusan</center></th>
+                    <th><center>Nomor Induk</center></th>
+                    <th><center>Nama</center></th>
                     <th><center>Detail</center></th>
                     <th><center>Perbarui</center></th>
                     <th><center>Hapus</center></th>
@@ -31,7 +30,7 @@
 						?>
 					</td>
 					<td style="text-align:center">
-						<?php echo "Teknik Komputer Jaringan";
+						<?php echo "Ridwan Surya Putra";
 						?>
 					</td>	
 					<td style="text-align:center">
@@ -48,11 +47,11 @@
 				<tr>
 					<td style="text-align:center">
 						<?php 
-						echo "123456" ;
+						echo "2318128" ;
 						?>
 					</td>
 					<td style="text-align:center">
-						<?php echo "Tata Boga";
+						<?php echo "Ridwan Surya Putra";
 						?>
 					</td>	
 					<td style="text-align:center">
@@ -71,11 +70,11 @@
 				<tr>
 					<td style="text-align:center">
 						<?php 
-						echo "09085" ;
+						echo "2318128" ;
 						?>
 					</td>
 					<td style="text-align:center">
-						<?php echo "Kecantikan";
+						<?php echo "Ridwan Surya Putra";
 						?>
 					</td>	
 					<td style="text-align:center">
@@ -97,11 +96,4 @@
 	</div>	
 </div>	
 
-
-
-
-@foreach($banyak_jurusan as $element)
-	{{ $element->KD_JURUSAN }} <br>
-	{{	$element->NAMA_JURUSAN }}
-@endforeach
-
+@stop						
