@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @extends('layouts.scadmin.base')
 
 @section('content')
@@ -97,8 +97,7 @@
 	</div>	
 </div>	
 
-@stop						
-=======
+
 
 
 @foreach($banyak_jurusan as $element)
@@ -106,5 +105,3 @@
 	{{	$element->NAMA_JURUSAN }}
 @endforeach
 
-
->>>>>>> cdbba2339f168a46827136059b37471482213ef4

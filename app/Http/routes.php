@@ -108,3 +108,35 @@ Route::get('proses_ujian',function(){
 
 Route::get('mapping_jurusan/{id}', 'AdminController@mapel_to_jurusan');
 
+Route::get('jurusan/{id}/view_edit','AdminController@detail_jurusan');
+
+Route::get('mapel/{id}/view_edit','AdminController@lihat_mapel');
+
+
+Route::get('mapping_mapel/{id}', 'AdminController@jurusan_to_mapel');
+
+// Routing yang udh dipisahin
+// contoh prefix
+/*
+		Route::group(['prefix' => 'admin'], function () {
+		    Route::get('users', function ()    {
+		        // Matches The "/admin/users" URL
+		    });
+		});
+
+		Route::group(['prefix' => 'accounts/{account_id}'], function () {
+		    Route::get('detail', function ($account_id)    {
+		        // Matches The accounts/{account_id}/detail URL
+		    });
+		});
+
+*/
+
+// contoh group
+/*
+	Route::group(['as' => 'admin::'], function () {
+	    Route::get('dashboard', ['as' => 'dashboard', function () {
+	        // Route named "admin::dashboard"
+	    }]);
+	});
+*/
