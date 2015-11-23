@@ -5,7 +5,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jurusan;
 use App\Models\Guru;
-use App\Models\MapelToJurusan;
+use App\Models\MapelToJurusanMapping;
+use App\Models\Mapel;
 use Input;
 
 class AdminController extends Controller {
@@ -20,11 +21,26 @@ class AdminController extends Controller {
 		//
 		return view('/content/scadmin/insert_guru');
 	}
-
+	
+	public function lihat_mapel($id)
+	{
+		$hasil = MapelToJurusanMapping::find($id)->jurusan;
+		return $hasil;
+	}
+	
 	public function mapel_to_jurusan($id)
 	{
-		$hasil = Jurusan::find($id)->mapelsLegacy();
-		return $hasil;
+		//$hasil = Jurusan::find($id);
+		//$mapel = Jurusan::find($id)->mapelsLegacy;
+		//return view('content\scadmin\list_jurusan')->with('mapels', $mapel);
+		$jurusans = Mapel::find($id)->jurusans()->orderBy('NAMA_JURUSAN');
+		return view('content\scadmin\list_jurusan')->with('abc',$jurusans);
+	}
+
+	public function jurusan_to_mapel($id)
+	{
+		$mapels = Jurusan::find($id)->mapels()->pivot;
+		return $mapels;
 	}
 
 	/**
@@ -103,7 +119,8 @@ class AdminController extends Controller {
 	{
 		$jurusans = Jurusan::all();
 		//return $jurusans;
-		return view('/content/scadmin/list_jurusan')->with('banyak_jurusan', $jurusans);
+		//return view('/content/scadmin/list_jurusan')->with('banyak_jurusan', $jurusans);
+		return view('content/scadmin/list_jurusan')->with('jurusans', $jurusans);
 	}
 
 	public function addGuru(Request $request)
@@ -171,6 +188,11 @@ class AdminController extends Controller {
 		return view('/content/scadmin/insert_ujian');
 	}
 	
+	public function detail_jurusan($idnya)
+	{
+		$jurusan = Jurusan::FindOrFail($idnya);
+		return view('/content/scadmin/list_jurusan')->with('jurusans',$jurusan);
+	}
 	/*
 	public function index()
     {
