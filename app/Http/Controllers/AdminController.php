@@ -18,7 +18,7 @@ class AdminController extends Controller {
 	public function index()
 	{
 		//
-		return view('/content/login/login_form');
+		return view('/content/scadmin/dashboard');
 	}
 
 	public function mapel_to_jurusan($id)
