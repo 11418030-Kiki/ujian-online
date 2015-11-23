@@ -12,13 +12,8 @@
                             <button type="submit" name="submit" value="submit" class="btn btn-block btn-darkblue" href="">MASUK</button>
                         </div>
                         <div class="col-md-6 login-text">
-                            <a href="">
+                            <a href="login/reset_password">
                                 Lupa password?
-                            </a>
-                        </div>
-                        <div class="col-md-6 text-right login-text">
-                            <a href="">
-                                Pendaftaran Lembaga
                             </a>
                         </div>
                     </form>
