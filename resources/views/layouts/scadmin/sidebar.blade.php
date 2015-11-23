@@ -3,7 +3,7 @@
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
             <li class="text-center">
-                <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                <img src="assets/img/raymon.jpg" class="user-image img-responsive"/>
             </li>   
             <li>
                 <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
@@ -15,7 +15,7 @@
                         <a href="{{route('insert_siswa')}}">Tambah Data Siswa</a>
                       </li>
                        <li>
-                         <a href="{{route('insert_siswa')}}">Data Siswa</a>
+                         <a href="{{route('list_siswa')}}">Data Siswa</a>
                       </li>
                          
                  </ul>
@@ -27,7 +27,7 @@
                          <a href="{{route('insert_guru')}}">Tambah Data Guru</a>
                        </li>
                        <li>
-                         <a href="{{route('insert_siswa')}}">Data Guru</a>
+                         <a href="{{route('list_guru')}}">Data Guru</a>
                        </li>    
                 </ul>
             </li>  
@@ -38,7 +38,7 @@
                                 <a href="{{route('insert_jurusan')}}">Tambah Data Jurusan</a>
                             </li>
                             <li>
-                                <a href="{{route('insert_siswa')}}">Data Jurusan</a>
+                                <a href="{{route('list_jurusan')}}">Data Jurusan</a>
                             </li>
                          
                         </ul>
@@ -50,7 +50,7 @@
                                 <a href="{{route('insert_mapel')}}">Tambah Mata Pelajaran</a>
                             </li>
                             <li>
-                                <a href="{{route('insert_siswa')}}">Data Mata Pelajaran</a>
+                                <a href="{{route('list_mapel')}}">Data Mata Pelajaran</a>
                             </li>
                          
                         </ul>
