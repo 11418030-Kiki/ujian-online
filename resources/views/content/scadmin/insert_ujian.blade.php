@@ -41,27 +41,22 @@
                             <div class="form-group">
                                 <label class="col-lg-2 col-md-2 col-sm-2" for="name">Waktu Mulai Ujian</label>
                                 <div class="col-lg-10 col-md-10 col-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">&nbsp;&nbsp;&nbsp;</span>
-                                        <input type="text" class="form-control" name="mulai" placeholder="Masukkan waktu mulai ujian" required="required">
-                                    </div>
-                                </div>        
-                            </div>
-                            <div class="form-group">
-                                <label class="col-lg-2 col-md-2 col-sm-2" for="name">Waktu Mulai Ujian</label>
-                                <div id="datetimepicker2" class="input-append">
-                                    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
-                                    <span class="add-on">
-                                        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-                                    </span>
-                                </div>        
+                                    <div id="datetimepicker2" class="input-append">
+                                        <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
+                                        <span class="add-on">
+                                            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+                                        </span>
+                                    </div>     
+                                </div>   
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-2 col-md-2 col-sm-2" for="name">Waktu Selesai Ujian</label>
                                 <div class="col-lg-10 col-md-10 col-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">&nbsp;&nbsp;&nbsp;</span>
-                                        <input type="text" class="form-control" name="selesai" placeholder="Masukkan waktu selesai ujian" required="required">
+                                    <div id="datetimepicker2" class="input-append">
+                                        <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
+                                        <span class="add-on">
+                                            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+                                        </span>
                                     </div>
                                 </div>        
                             </div>

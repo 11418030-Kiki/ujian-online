@@ -34,7 +34,6 @@ class AdminController extends Controller {
 		$jurusan->save();*/
 		return view('/content/scadmin/list_jurusan');
 	}
-
 	
 	public function lihat_mapel($id)
 	{
@@ -213,17 +212,29 @@ class AdminController extends Controller {
 		return view('/content/scadmin/insert_rombel');
 	}
 
+	public function list_rombel()
+	{
+		return view('/content/scadmin/list_rombel');
+	}
+
 	public function insert_ujian()
 	{
 		return view('/content/scadmin/insert_ujian');
 	}
 
+	public function list_ujian()
+	{
+		return view('/content/scadmin/list_ujian');
+	}
 	
 	public function detail_jurusan($idnya)
 	{
 		$jurusan = Jurusan::FindOrFail($idnya);
 		return view('/content/scadmin/list_jurusan')->with('jurusans',$jurusan);
 	}
+
+
+
 	/*
 	public function index()
     {

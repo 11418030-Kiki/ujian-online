@@ -54,7 +54,30 @@
                             </li>
                          
                         </ul>
-           </li>             
+           </li>   
+           <li>
+                 <a href="#"><i class="fa fa-archive fa-3x"></i>  Rombel<span class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level">
+                       <li>
+                         <a href="{{route('insert_rombel')}}">Tambah Rombel</a>
+                       </li>
+                       <li>
+                         <a href="{{route('list_rombel')}}">Data Rombel</a>
+                       </li>    
+                </ul>
+            </li> 
+            <li>
+                 <a href="#"><i class="fa fa-pencil-square-o fa-3x"></i>  Ujian<span class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level">
+                       <li>
+                         <a href="{{route('insert_ujian')}}">Tambah Data Ujian</a>
+                       </li>
+                       <li>
+                         <a href="{{route('list_ujian')}}">Data Ujian </a>
+                       </li>    
+                </ul>
+            </li>   
+
         </ul>
     </div>
 </nav>  

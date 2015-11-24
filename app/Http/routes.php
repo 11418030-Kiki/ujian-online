@@ -33,9 +33,16 @@ Route::get('insert_siswa',['as'=>'insert_siswa','uses'=>'AdminController@insert_
 
 /* Rombel */
 Route::get('insert_rombel', ['as'=>'insert_rombel','uses'=>'AdminController@insert_rombel']);
+Route::get('list_rombel', ['as'=>'list_rombel','uses'=>'AdminController@list_rombel']);
+Route::get('update_rombel', ['as'=>'update_rombel', 'uses'=>'AdminController@update_rombel']);
+Route::get('detail_rombel', ['as'=>'detail_rombel', 'uses'=>'AdminController@detail_rombel']);
 
 /* Ujian */
-Route::get('insert_ujian', ['aas'=>'insert_ujian','uses'=>'AdminController@insert_ujian']);
+Route::get('insert_ujian', ['as'=>'insert_ujian','uses'=>'AdminController@insert_ujian']);
+Route::get('list_ujian', ['as'=>'list_ujian','uses'=>'AdminController@list_ujian']);
+Route::get('update_ujian', ['as'=>'update_ujian', 'uses'=>'AdminController@update_ujian']);
+Route::get('detail_ujian', ['as'=>'detail_ujian', 'uses'=>'AdminController@detail_ujian']);
+
 
 Route::get('insert_mapel',['as'=>'insert_mapel','uses'=>'AdminController@insert_mapel']);
 
