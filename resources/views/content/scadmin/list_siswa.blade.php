@@ -23,15 +23,13 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($siswas as $siswa)
                 	<tr>
 					<td style="text-align:center">
-						<?php 
-						echo "2318128" ;
-						?>
+						{{ $siswa->NOMOR_INDUK }}
 					</td>
 					<td style="text-align:center">
-						<?php echo "Ridwan Surya Putra";
-						?>
+						{{ $siswa->NAMA }}
 					</td>	
 					<td style="text-align:center">
 					<a href='#' class="btn btn-block btn-primary">Detail</a>
@@ -43,51 +41,7 @@
 					<a href='#' class="btn btn-block btn-primary">Hapus</a>
 					</td>
 				</tr>
-
-				<tr>
-					<td style="text-align:center">
-						<?php 
-						echo "2318128" ;
-						?>
-					</td>
-					<td style="text-align:center">
-						<?php echo "Ridwan Surya Putra";
-						?>
-					</td>	
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Detail</a>
-					</td>
-
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
-					</td>
-
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Hapus</a>
-					</td>
-				</tr>
-
-				<tr>
-					<td style="text-align:center">
-						<?php 
-						echo "2318128" ;
-						?>
-					</td>
-					<td style="text-align:center">
-						<?php echo "Ridwan Surya Putra";
-						?>
-					</td>	
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Detail</a>
-					</td>
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
-					</td>
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Hapus</a>
-					</td>
-				</tr>
-
+				@endforeach
                 </tbody>
 					</div>
 				</div>

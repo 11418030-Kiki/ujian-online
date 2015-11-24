@@ -22,15 +22,13 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($mapels as $mapel)
                 	<tr>
 					<td style="text-align:center">
-						<?php 
-						echo "2318128" ;
-						?>
+						{{ $mapel->KD_MAPEL }}
 					</td>
 					<td style="text-align:center">
-						<?php echo "Matematika";
-						?>
+						{{ $mapel->NAMA_MAPEL }}
 					</td>	
 					<td style="text-align:center">
 					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
@@ -39,44 +37,7 @@
 					<a href='#' class="btn btn-block btn-primary">Hapus</a>
 					</td>
 				</tr>
-
-				<tr>
-					<td style="text-align:center">
-						<?php 
-						echo "2318128" ;
-						?>
-					</td>
-					<td style="text-align:center">
-						<?php echo "Bahasa Inggris";
-						?>
-					</td>
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
-					</td>
-
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Hapus</a>
-					</td>
-				</tr>
-
-				<tr>
-					<td style="text-align:center">
-						<?php 
-						echo "2318128" ;
-						?>
-					</td>
-					<td style="text-align:center">
-						<?php echo "Jaringan dan Komunikasi";
-						?>
-					</td>
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
-					</td>
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Hapus</a>
-					</td>
-				</tr>
-
+				@endforeach
                 </tbody>
 					</div>
 				</div>

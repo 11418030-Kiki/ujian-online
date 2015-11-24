@@ -10,7 +10,7 @@
 						<h3>Tambah Jurusan</h3>
 					</div>
 					<div class="panel-body">
-						<form role="form" class="form-horizontal" id="form" name="insertdatasiswa" method="post" action="http://localhost:8000/form_insert_jurusan/add" enctype="multipart/form-data">
+						<form role="form" class="form-horizontal" id="form" name="insertdatasiswa" method="post" enctype="multipart/form-data" action= {{ URL::to('admin/jurusan/show_all') }}>
 							<div class="form-group">			
 							<input name="_token" type="hidden" value="{{ csrf_token() }}">
 								<label class="col-lg-2 col-md-2 col-sm-2" for="jurusan">Kode Jurusan</label>
@@ -43,7 +43,7 @@
 						<div class="col-md-10">
 						</div>
 						<div class="btn-menu col-md-2">
-							<button type="submit" div class="btn btn-primary pull-right" >Save</button>
+							<input type="submit" div class="btn btn-primary pull-right" value="Simpan">Save</button>
 						</div>
 					</div>
 				</div>

@@ -30,10 +30,8 @@
 								</div>
 							</div>
 						</form>
-						<div class="col-lg-10 col-md-10">
-						</div>
-						<div class="btn-menu col-lg-2 col-md-2">
-							<a href="#" id="btn-save-jurusan" class="btn btn-block btn-primary">Simpan</a>
+						<div class="btn-menu col-md-2" style="float:right;">
+							<a href="#" id="btn-save-jurusan" class="btn btn-block btn-primary" >Simpan</a>
 						</div>
 					</div>
 				</div>

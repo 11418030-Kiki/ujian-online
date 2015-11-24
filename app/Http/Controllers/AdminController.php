@@ -7,6 +7,7 @@ use App\Models\Jurusan;
 use App\Models\Guru;
 use App\Models\MapelToJurusanMapping;
 use App\Models\Mapel;
+use App\Models\Siswa;
 use Input;
 
 class AdminController extends Controller {
@@ -19,13 +20,31 @@ class AdminController extends Controller {
 	public function index()
 	{
 		//
-		return view('/content/login/login_form');
+		return view('content\scadmin\dashboard');
+		
 	}
+
+	public function insert_jurusan(Request $request)
+	{
+		/*echo "masuk";
+		$jurusan = new Jurusan;
+		$jurusan->KD_JURUSAN = Input::get('kd_jurusan');
+		$jurusan->NAMA_JURUSAN = Input::get('nama_jurusan');
+		$jurusan->DESKRIPSI = Input::get('deskripsi');
+		$jurusan->save();*/
+		return view('/content/scadmin/list_jurusan');
+	}
+
 	
 	public function lihat_mapel($id)
 	{
 		$hasil = MapelToJurusanMapping::find($id)->jurusan;
 		return $hasil;
+	}
+
+	public function login()
+	{
+		return view('/content/login/login_form');
 	}
 	
 	public function mapel_to_jurusan($id)
@@ -33,14 +52,36 @@ class AdminController extends Controller {
 		//$hasil = Jurusan::find($id);
 		//$mapel = Jurusan::find($id)->mapelsLegacy;
 		//return view('content\scadmin\list_jurusan')->with('mapels', $mapel);
-		$jurusans = Mapel::find($id)->jurusans()->orderBy('NAMA_JURUSAN');
-		return view('content\scadmin\list_jurusan')->with('abc',$jurusans);
+		//$jurusans = Mapel::find($id)->jurusans()->orderBy('NAMA_JURUSAN');
+		//return view('content\scadmin\list_jurusan_gagal')->with('abc',$jurusans);
+		$jurusans =  Mapel::find($id);
+		return view('content\scadmin\list_jurusan_gagal')->with('abc',$jurusans);
 	}
 
 	public function jurusan_to_mapel($id)
 	{
 		$mapels = Jurusan::find($id)->mapels()->pivot;
 		return $mapels;
+	}
+
+	public function show_all_jurusan()
+	{
+		$jurusans = Jurusan::all();
+		//return $siswas;
+		return view('content\scadmin\list_jurusan')->with('jurusans', $jurusans);
+	}
+
+	public function show_all_siswa()
+	{
+		$siswas = Siswa::all();
+		//return $siswas;
+		return view('content\scadmin\list_siswa')->with('siswas', $siswas);
+	}
+
+	public function show_all_mapel()
+	{
+		$mapels = Mapel::all();
+		return view('content\scadmin\list_mapel')->with('mapels', $mapels);
 	}
 
 	/**
@@ -107,14 +148,6 @@ class AdminController extends Controller {
 		//
 	}
 
-	public function show_all_jurusan()
-	{
-		$Jurusans = Jurusan::all();
-		return $Jurusans;
-		//return 'berhasil kuda';
-	}
-
-
 	public function list_jurusan()
 	{
 		$jurusans = Jurusan::all();
@@ -153,10 +186,7 @@ class AdminController extends Controller {
 		return view('/content/scadmin/insert_siswa');
 	}
 
-	public function insert_jurusan()
-	{
-		return view('/content/scadmin/insert_jurusan');
-	}
+	
 
 	public function insert_mapel()
 	{

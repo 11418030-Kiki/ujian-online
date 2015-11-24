@@ -17,6 +17,6 @@ class Jurusan extends Model {
 
      public function mapels()
     {
-        return $this->belongsToMany('App\Models\Mapel','MAPEL_TO_JURUSAN_MAPPING','KD_JURUSAN','KD_MAPEL');
+        return $this->belongsToMany('App\Models\Mapel','MAPEL_JURUSAN','KD_JURUSAN','KD_MAPEL');
     }
 }

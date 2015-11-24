@@ -17,6 +17,7 @@
                    	<tr class="info">
                     <th><center>Kode Jurusan</center></th>
                     <th><center>Nama Jurusan</center></th>
+                    <th><center>Deskripsi</center></th>
                     <th><center>Detail</center></th>
                     <th><center>Perbarui</center></th>
                     <th><center>Hapus</center></th>
@@ -24,18 +25,19 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($jurusans as $jurusan)
                 	<tr>
 					<td style="text-align:center">
-						<?php 
-						echo "2318128" ;
-						?>
+						{{ $jurusan->KD_JURUSAN }}
 					</td>
 					<td style="text-align:center">
-						<?php echo "Teknik Komputer Jaringan";
-						?>
-					</td>	
+						{{ $jurusan->NAMA_JURUSAN }}
+					</td>
 					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Detail</a>
+						{{ $jurusan->DESKRIPSI }}
+					</td>		
+					<td style="text-align:center">
+					<a href={{ URL::to('admin/siswa/show_all') }} class="btn btn-block btn-primary">Detail</a>
 					</td>
 						<td style="text-align:center">
 					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
@@ -44,51 +46,7 @@
 					<a href='#' class="btn btn-block btn-primary">Hapus</a>
 					</td>
 				</tr>
-
-				<tr>
-					<td style="text-align:center">
-						<?php 
-						echo "123456" ;
-						?>
-					</td>
-					<td style="text-align:center">
-						<?php echo "Tata Boga";
-						?>
-					</td>	
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Detail</a>
-					</td>
-
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
-					</td>
-
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Hapus</a>
-					</td>
-				</tr>
-
-				<tr>
-					<td style="text-align:center">
-						<?php 
-						echo "09085" ;
-						?>
-					</td>
-					<td style="text-align:center">
-						<?php echo "Kecantikan";
-						?>
-					</td>	
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Detail</a>
-					</td>
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
-					</td>
-					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Hapus</a>
-					</td>
-				</tr>
-
+				@endforeach
                 </tbody>
 					</div>
 				</div>
@@ -96,12 +54,6 @@
 		</div>	
 	</div>	
 </div>	
+@stop
 
-
-
-
-@foreach($banyak_jurusan as $element)
-	{{ $element->KD_JURUSAN }} <br>
-	{{	$element->NAMA_JURUSAN }}
-@endforeach
 

@@ -46,8 +46,6 @@ Route::get('insert_rombel', ['as'=>'insert_rombel','uses'=>'AdminController@inse
 /* Ujian */
 Route::get('insert_ujian', ['aas'=>'insert_ujian','uses'=>'AdminController@insert_ujian']);
 
-Route::get('insert_jurusan',['as'=>'insert_jurusan','uses'=>'AdminController@insert_jurusan']);
-
 Route::get('insert_mapel',['as'=>'insert_mapel','uses'=>'AdminController@insert_mapel']);
 
 Route::get('list_guru',['as'=>'list_guru','uses'=>'AdminController@list_guru']);
@@ -149,3 +147,88 @@ Route::get('mapping_mapel/{id}', 'AdminController@jurusan_to_mapel');
 	    }]);
 	});
 */
+
+Route::group(['prefix' => 'admin'], function()
+{
+    // /admin/dashboard
+    Route::get('dashboard', [
+        'as' => 'dashboard', 
+        'uses' => 'AdminController@Index'
+    ]);
+
+    // /admin/members
+    Route::group(['prefix' => 'siswa'], function()
+    {
+        Route::get('show_all', [
+            'as' => 'show_all', 
+            'uses' => 'AdminController@show_all_siswa'
+        ]);
+
+        Route::get('insert', function (){
+        	return view('content\scadmin\insert_siswa');
+        }
+        );
+
+        // /admin/members/search
+        Route::get('search', [
+            'as' => 'admin_member_search', 
+            'uses' => 'UsersController@getMemberSearch'
+        ]);
+
+        Route::get('{id}/status', [
+            'as' => 'admin_member_inactive', 
+            'uses' => 'UsersController@getUserInactive'
+        ]);
+
+        Route::post('{id}/remove', [
+           'before' => 'isGod',
+            'as' => 'admin_member_remove', 
+            'uses' => 'UsersController@postRemove'
+        ]);
+
+        Route::get('mailinglist', [
+            'as' => 'admin_member_maillist', 
+            'uses' => 'UsersController@getMailingList'
+        ]);
+
+    });
+
+    Route::group(['prefix' => 'jurusan'], function()
+    {
+        Route::get('show_all', [
+            'as' => 'show_all', 
+            'uses' => 'AdminController@show_all_jurusan'
+        ]);
+
+        Route::get('form_insert', function (){
+        	return view('content\scadmin\insert_jurusan');
+        }
+        );
+
+        Route::post('insert_jurusan', [
+        	'as' => 'insert_jurusan', 
+            'uses' => 'AdminController@insert_jurusan'
+
+        ]);
+
+    });
+
+    Route::group(['prefix' => 'mapel'], function()
+    {
+        Route::get('show_all', [
+            'as' => 'show_all', 
+            'uses' => 'AdminController@show_all_mapel'
+        ]);
+
+        Route::get('form_insert', function (){
+        	return view('content\scadmin\insert_mapel');
+        });
+
+        Route::post('insert_jurusan', [
+        	'as' => 'insert_jurusan', 
+            'uses' => 'AdminController@insert_jurusan'
+
+        ]);
+
+    });
+});
