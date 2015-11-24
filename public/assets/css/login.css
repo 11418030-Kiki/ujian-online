@@ -16,7 +16,7 @@
     src: url(../fonts/Lato-Bold.ttf);
 }
 /* Form */
-.btn-reddark{
+.btn-darkred{
     font-family: lato;
     font-weight: 500;
     font-size: 12px;
@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 
-.btn-reddark:hover, .btn-reddark:focus, .btn-reddark:active{
+.btn-darkred:hover, .btn-darkred:focus, .btn-darkred:active{
     text-decoration: none;
     background-color: #c0392b;
     border-color: #c0392b;

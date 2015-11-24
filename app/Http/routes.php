@@ -12,29 +12,20 @@
 */
 
 /*
-Mulai Routes untuk binary admin
+Mulai Routes untuk Login
 */
-Route::get('/', 'AdminController@index');
+Route::get('/', 'LoginController@index');
 
-Route::get('blank','BinaryController@show_blank');
+Route::get('/login', 'LoginController@index');
 
-Route::get('chart','BinaryController@show_chart');
-
-Route::get('form','BinaryController@show_form');
-
-Route::get('table','BinaryController@show_table');
-
-Route::get('tab-panel','BinaryController@show_tab_panel');
-
-Route::get('ui','BinaryController@show_ui');
-
+Route::get('/reset_password', 'LoginController@reset_password');
 
 /*
 Routes untuk binary admin selesai
 */
 
 //Route::get('/', 'WelcomeController@index');
-Route::get('home', 'HomeController@index');
+Route::get('/dashboard', 'AdminController@index');
 
 Route::get('insert_guru',['as'=>'insert_guru','uses'=>'AdminController@insert_guru']);
 
@@ -71,6 +62,8 @@ Route::get('detail_guru',['as'=>'detail_guru','uses'=>'AdminController@detail_gu
 Route::get('detail_jurusan',['as'=>'detail_jurusan','uses'=>'AdminController@detail_jurusan']);
 
 Route::get('jurusan', 'AdminController@show_all_jurusan');
+
+Route::get('insert_soal', ['as'=>'insert_soal', 'uses'=>'AdminController@insert_soal']);
 
 /*Route::controllers([
 	'auth' => 'Auth\AuthController',

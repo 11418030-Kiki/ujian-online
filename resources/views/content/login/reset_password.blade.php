@@ -2,8 +2,7 @@
 
 @section('content')
 					<p class="text-center">Masukan alamat email anda, <br> dan kami akan membantu mengembalikan password anda</p>
-					<div id="alert-reset-password" class="alert alert-danger" style="display: none;">
-						
+					<div id="alert-reset-password" class="alert alert-danger" style="display: none;">		
 					</div>
 					<form name="resetPassword" novalidate>
 						<div class="form">

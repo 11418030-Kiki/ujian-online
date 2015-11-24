@@ -419,4 +419,3 @@ alter table SOAL add constraint FK_UJIANTOSOALMAPPING foreign key (KD_UJIAN)
 
 alter table UJIAN add constraint FK_RELATIONSHIP_34 foreign key (ID_MAPEL)
       references MAPEL_TO_JURUSAN_MAPPING (ID_MAPEL) on delete restrict on update restrict;
-
