@@ -194,6 +194,11 @@ class AdminController extends Controller {
 		$jurusan = Jurusan::FindOrFail($idnya);
 		return view('/content/scadmin/list_jurusan')->with('jurusans',$jurusan);
 	}
+
+	public function insert_soal()
+	{
+		return view('/content/scadmin/insert_soal');
+	}
 	/*
 	public function index()
     {

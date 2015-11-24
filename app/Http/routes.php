@@ -65,6 +65,8 @@ Route::get('detail_jurusan',['as'=>'detail_jurusan','uses'=>'AdminController@det
 
 Route::get('jurusan', 'AdminController@show_all_jurusan');
 
+Route::get('insert_soal', ['as'=>'insert_soal', 'uses'=>'AdminController@insert_soal']);
+
 /*Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
