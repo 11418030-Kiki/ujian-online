@@ -19,60 +19,46 @@
                     <th><center>Nama Ujian</center></th>
                     <th><center>Waktu Mulai Ujian</center></th>
                     <th><center>Waktu Selesai Ujian</center></th>
-                    <th><center>List Random</center></th>
                     <th><center>Jumlah Pilihan</center></th>
       
                 </tr>
                 </thead>
+                 @foreach($ujians as $ujian)
                 <tbody>
                 	<tr>
 					<td style="text-align:center">
-						<?php 
-						echo "021" ;
-						?>
+						{{$ujian->KD_UJIAN }}
 					</td>
 					<td style="text-align:center">
-						<?php 
-						echo "0211";
-						?>
+						{{$ujian->ID_MAPEL}}
 					</td>
 					<td style="text-align:center">
-						<?php 
-						echo "Rajin Belajar";
-						?>
+						{{$ujian->NAMA_UJIAN}}
 					</td>
 					<td style="text-align:center">
-						<?php 
-						echo "12-12-2015 / 08:00:00";
-						?>
+						{{$ujian->START_DATETIME}}
 					</td>
 					<td style="text-align:center">
-						<?php 
-						echo "12-12-2015 / 15:30:00";
-						?>
+						{{$ujian->END_DATETIME}}
 					</td>
 					<td style="text-align:center">
-						<?php 
-						echo "List Random";
-						?>
+						{{$ujian->JUMLAH_PILIHAN}}
+					</td>
+					<td style="text-align:center">
+						<a href='{{route('random', ['id'=>$ujian->KD_UJIAN])}}' class="btn btn-block btn-primary">Shuffle</a>
 					</td>	
 					<td style="text-align:center">
-						<?php 
-						echo "5";
-						?>
+						<a href='#' class="btn btn-block btn-primary">Detail</a>
 					</td>
 					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Detail</a>
-					</td>
-						<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Perbarui</a>
+						<a href='#' class="btn btn-block btn-primary">Perbarui</a>
 					</td>
 					<td style="text-align:center">
-					<a href='#' class="btn btn-block btn-primary">Hapus</a>
+						<a href='#' class="btn btn-block btn-primary">Hapus</a>
 					</td>
-				</tr>
-
+					</tr>
                 </tbody>
+                @endforeach
 					</div>
 				</div>
 			</div>

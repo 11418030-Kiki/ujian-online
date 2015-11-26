@@ -9,6 +9,7 @@ use App\Models\MapelToJurusanMapping;
 use App\Models\Mapel;
 use App\Models\Siswa;
 use Input;
+use DB;
 
 class AdminController extends Controller {
 
@@ -220,11 +221,6 @@ class AdminController extends Controller {
 	public function insert_ujian()
 	{
 		return view('/content/scadmin/insert_ujian');
-	}
-
-	public function list_ujian()
-	{
-		return view('/content/scadmin/list_ujian');
 	}
 	
 	public function detail_jurusan($idnya)

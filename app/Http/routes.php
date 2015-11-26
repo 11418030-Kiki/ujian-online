@@ -39,7 +39,7 @@ Route::get('detail_rombel', ['as'=>'detail_rombel', 'uses'=>'AdminController@det
 
 /* Ujian */
 Route::get('insert_ujian', ['as'=>'insert_ujian','uses'=>'AdminController@insert_ujian']);
-Route::get('list_ujian', ['as'=>'list_ujian','uses'=>'AdminController@list_ujian']);
+Route::get('list_ujian', ['as'=>'list_ujian','uses'=>'UjianController@list_ujian']);//udah diganti ke controller ujian
 Route::get('update_ujian', ['as'=>'update_ujian', 'uses'=>'AdminController@update_ujian']);
 Route::get('detail_ujian', ['as'=>'detail_ujian', 'uses'=>'AdminController@detail_ujian']);
 
@@ -121,6 +121,11 @@ Route::get('mapel/{id}/view_edit','AdminController@lihat_mapel');
 
 
 Route::get('mapping_mapel/{id}', 'AdminController@jurusan_to_mapel');
+
+Route::get('random/{id}',['as'=>'random','uses'=>'UjianController@random']);//masih test
+
+
+
 
 // Routing yang udh dipisahin
 // contoh prefix
