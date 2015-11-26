@@ -15,7 +15,7 @@
             
                 <div class="form-group">
                     <input name="_token" type="hidden" value="{{csrf_token()}}">
-                    @for ($i = 0; $i < 10; $i++)
+                    @for ($i = 1; $i <= 10; $i++)
    					 	<label class="col-lg-10 col-md-10 col-sm-10" for="#">
                         	<input type="checkbox" name="soal[]" value="#"/>&nbsp;&nbsp;{{$i}}
                     	</label>
