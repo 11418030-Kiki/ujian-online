@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 //use DateInterval;
 use Carbon\Carbon;
 use DateTimeZone;
+use DB;
 
 class UjianController extends Controller {
 
@@ -145,6 +146,18 @@ class UjianController extends Controller {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function list_ujian()
+	{
+		$list_ujiaan = DB::select("SELECT * FROM ujian");
+		return view('/content/scadmin/list_ujian')->with('ujians',$list_ujiaan);
+	}
+
+	public function random(Request $request, $id)
+	{
+		$jml = DB::select("SELECT JUMLAH_SOAL FROM ujian WHERE KD_UJIAN = '$id'");
+		return view('/content/scadmin/random')->with('jumlah',$jml);
 	}
 
 }
