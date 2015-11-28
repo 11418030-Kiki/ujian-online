@@ -48,6 +48,10 @@
 				</tr>
 				@endforeach
                 </tbody>
+                	</table>
+					</div>
+					<div id = "paginator" style ="float:right;">
+						{!! $jurusans->render() !!}
 					</div>
 				</div>
 			</div>

@@ -25,13 +25,18 @@ class AdminController extends Controller {
 	}
 
 	public function insert_jurusan(Request $request)
-	{
-		/*echo "masuk";
+	{	/*
 		$jurusan = new Jurusan;
 		$jurusan->KD_JURUSAN = Input::get('kd_jurusan');
 		$jurusan->NAMA_JURUSAN = Input::get('nama_jurusan');
 		$jurusan->DESKRIPSI = Input::get('deskripsi');
-		$jurusan->save();*/
+		$jurusan->save();
+		*/
+		$jurusan = new Jurusan;
+		$jurusan->KD_JURUSAN = $request->kd_jurusan;
+		$jurusan->NAMA_JURUSAN = $request->nama_jurusan;
+		$jurusan->DESKRIPSI = $request->deskripsi;
+		$jurusan->save();
 		return view('/content/scadmin/list_jurusan');
 	}
 
@@ -66,21 +71,21 @@ class AdminController extends Controller {
 
 	public function show_all_jurusan()
 	{
-		$jurusans = Jurusan::all();
+		$jurusans = Jurusan::paginate(10);
 		//return $siswas;
 		return view('content\scadmin\list_jurusan')->with('jurusans', $jurusans);
 	}
 
 	public function show_all_siswa()
 	{
-		$siswas = Siswa::all();
+		$siswas = Siswa::paginate(10);
 		//return $siswas;
 		return view('content\scadmin\list_siswa')->with('siswas', $siswas);
 	}
 
 	public function show_all_mapel()
 	{
-		$mapels = Mapel::all();
+		$mapels = Mapel::paginate(10);
 		return view('content\scadmin\list_mapel')->with('mapels', $mapels);
 	}
 
@@ -146,14 +151,6 @@ class AdminController extends Controller {
 	public function destroy($id)
 	{
 		//
-	}
-
-	public function list_jurusan()
-	{
-		$jurusans = Jurusan::all();
-		//return $jurusans;
-		//return view('/content/scadmin/list_jurusan')->with('banyak_jurusan', $jurusans);
-		return view('content/scadmin/list_jurusan')->with('jurusans', $jurusans);
 	}
 
 	public function addGuru(Request $request)

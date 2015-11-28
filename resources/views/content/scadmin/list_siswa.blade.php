@@ -43,7 +43,12 @@
 				</tr>
 				@endforeach
                 </tbody>
+                </table>
 					</div>
+					<div id = "paginator" style ="float:right;">
+						{!! $siswas->render() !!}
+					</div>
+				
 				</div>
 			</div>
 		</div>	

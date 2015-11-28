@@ -65,12 +65,12 @@ Route::get('jurusan', 'AdminController@show_all_jurusan');
 
 Route::get('insert_soal', ['as'=>'insert_soal', 'uses'=>'AdminController@insert_soal']);
 
-/*Route::controllers([
+Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 
 
-]);*/
+]);
 
 //Route untuk view masih kasar
 
@@ -198,11 +198,7 @@ Route::group(['prefix' => 'admin'], function()
         }
         );
 
-        Route::post('insert_jurusan', [
-        	'as' => 'insert_jurusan', 
-            'uses' => 'AdminController@insert_jurusan'
-
-        ]);
+       // Route::post('add', 'AdminController@insert_jurusan');
 
     });
 
@@ -225,3 +221,6 @@ Route::group(['prefix' => 'admin'], function()
 
     });
 });
+
+
+Route::post('admin/jurusan/add','AdminController@insert_jurusan');

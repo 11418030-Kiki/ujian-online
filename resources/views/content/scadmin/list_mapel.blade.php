@@ -39,7 +39,12 @@
 				</tr>
 				@endforeach
                 </tbody>
+                </table>
+                </div>
+					<div id = "paginator" style ="float:right;">
+						{!! $mapels->render() !!}
 					</div>
+				</div>
 				</div>
 			</div>
 		</div>	
