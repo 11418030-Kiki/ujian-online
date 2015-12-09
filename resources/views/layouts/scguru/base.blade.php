@@ -42,7 +42,7 @@
     <!-- JS -->
 
     <script src="{{asset('assets/js/libraries/jquery-1.11.3.min.js')}}"></script> <!-- jQuery -->
-    <script src="{{asset('assets/js/libraries/boostrap.min.js')}}"></script> <!-- Boostrap JS -->
+    <script src="{{asset('assets/js/libraries/bootstrap.min.js')}}"></script> <!-- Boostrap JS -->
     <script src="{{asset('assets/js/plugins/jquery/jquery.metisMenu.js')}}"></script> <!-- MetisMenu JS -->
     <script src="{{asset('assets/js/plugins/morris/raphael-2.1.0.min.js')}}"></script> <!-- Morris Chart JS -->
     <script src="{{asset('assets/js/plugins/morris/morris.js')}}"></script> <!-- Morris Chart JS -->

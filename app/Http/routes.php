@@ -97,6 +97,11 @@ Route::get('/scsiswa', function () {
     return view('content/scsiswa/dashboard');
 });
 
+Route::get('/scadmin', function () {
+    return view('content/scsiswa/dashboard');
+});
+
+
 
 
 Route::get('list_jurusan',['as'=>'list_jurusan','uses'=>'AdminController@list_jurusan']);
@@ -152,7 +157,7 @@ Route::get('random/{id}',['as'=>'random','uses'=>'UjianController@random']);//ma
 	    }]);
 	});
 */
-
+Route::group(['middleware' => 'auth'], function () {
 Route::group(['prefix' => 'admin'], function()
 {
     // /admin/dashboard
@@ -236,3 +241,23 @@ Route::group(['prefix' => 'admin'], function()
 
 
 Route::post('admin/jurusan/add','AdminController@insert_jurusan');
+
+
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+Route::get('profile', ['middleware' => 'auth', function() {
+    // Only authenticated users may enter...
+    return view('content\scadmin\dashboard');
+}]);
+
+// routes middleware group
+
+
+});

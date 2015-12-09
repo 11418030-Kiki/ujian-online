@@ -43,7 +43,7 @@
     @yield('page_script')
 
     <script src="{{asset('assets/js/libraries/jquery-1.11.3.min.js')}}"></script> <!-- jQuery -->   
-    <script src="{{asset('assets/js/libraries/boostrap.min.js')}}"></script> <!-- Boostrap JS -->
+    <script src="{{asset('assets/js/libraries/bootstrap.min.js')}}"></script> <!-- Boostrap JS -->
     <script src="{{asset('assets/js/plugins/jquery/jquery.metisMenu.js')}}"></script> <!-- MetisMenu JS -->
     <script src="{{asset('assets/js/plugins/jquery.uploadPreview.min.js')}}"></script>
     <script src="{{asset('assets/js/plugins/bootstrap/bootstrap-datetimepicker.min.js')}}"></script>
