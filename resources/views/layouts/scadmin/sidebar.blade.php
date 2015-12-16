@@ -24,10 +24,10 @@
                  <a href="#"><i class="fa fa-user fa-3x"></i>  Guru<span class="fa arrow"></span></a>
                  <ul class="nav nav-second-level">
                        <li>
-                         <a href="{{route('insert_guru')}}">Tambah Data Guru</a>
+                         <a href={{ URL::to('admin/siswa/show_all')}}>Tambah Data Guru</a>
                        </li>
                        <li>
-                         <a href="{{route('list_guru')}}">Data Guru</a>
+                         <a href={{ URL::to('admin/siswa/show_all')}}>Data Guru</a>
                        </li>    
                 </ul>
             </li>  
@@ -59,10 +59,10 @@
                  <a href="#"><i class="fa fa-archive fa-3x"></i>  Rombel<span class="fa arrow"></span></a>
                  <ul class="nav nav-second-level">
                        <li>
-                         <a href="{{route('insert_rombel')}}">Tambah Rombel</a>
+                         <a  href={{ URL::to('admin/mapel/form_insert') }}>Tambah Rombel</a>
                        </li>
                        <li>
-                         <a href="{{route('list_rombel')}}">Data Rombel</a>
+                         <a  href={{ URL::to('admin/mapel/form_insert') }}>Data Rombel</a>
                        </li>    
                 </ul>
             </li> 
@@ -70,10 +70,10 @@
                  <a href="#"><i class="fa fa-pencil-square-o fa-3x"></i>  Ujian<span class="fa arrow"></span></a>
                  <ul class="nav nav-second-level">
                        <li>
-                         <a href="{{route('insert_ujian')}}">Tambah Data Ujian</a>
+                         <a  href={{ URL::to('admin/mapel/form_insert') }}>Tambah Data Ujian</a>
                        </li>
                        <li>
-                         <a href="{{route('list_ujian')}}">Data Ujian </a>
+                         <a  href={{ URL::to('admin/mapel/form_insert') }}>Data Ujian </a>
                        </li>    
                 </ul>
             </li>   

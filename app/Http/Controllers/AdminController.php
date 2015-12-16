@@ -38,7 +38,7 @@ class AdminController extends Controller {
 		$jurusan->NAMA_JURUSAN = $request->nama_jurusan;
 		$jurusan->DESKRIPSI = $request->deskripsi;
 		$jurusan->save();
-		return view('/content/scadmin/list_jurusan');
+		return $this->show_all_jurusan();
 	}
 	
 	public function lihat_mapel($id)

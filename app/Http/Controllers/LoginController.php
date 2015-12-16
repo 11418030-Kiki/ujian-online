@@ -6,6 +6,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Input;
+use Auth;
+use App\Models\Siswa;
 
 class LoginController extends Controller {
 
@@ -17,7 +19,30 @@ class LoginController extends Controller {
 	public function index()
 	{
 		//
-		return view('/content/login/login_form');
+		if (Auth::check()) 
+		{
+    		// The user is logged in...
+    		//return view('content/scadmin/dashboard');
+			$user = Auth::user();
+			//$siswa = Siswa::where('USERNAME', $user->email);
+			//$flight = App\Flight::where('active', 1)->first();
+			if($user->role == 1)
+			{
+				return view('content/scadmin/dashboard');
+			}
+			elseif ($user->role == 2) {
+				return view('content/scguru/dashboard');
+				//return response('Unauthorized.', 401);
+			}
+			else
+			{
+				return view('content/scsiswa/dashboard');
+			}
+			}
+		else 
+		{
+			return view('content/login/login_form');
+		}
 	}
 
 	public function reset_password()
